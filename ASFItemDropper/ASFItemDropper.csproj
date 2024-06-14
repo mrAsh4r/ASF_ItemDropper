@@ -9,8 +9,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" IncludeAssets="compile" />
-		<PackageReference Include="System.Composition.AttributedModel"  />
+		<PackageReference Include="System.Composition.AttributedModel" />
 		<PackageReference Include="SteamKit2" IncludeAssets="compile" />
 	</ItemGroup>
 
