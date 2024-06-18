@@ -90,7 +90,7 @@ namespace ASFItemDropManager
             if (resultGamesPlayed == null) bot.ArchiLogger.LogNullError("resultGamesPlayed");
 
 
-            CPlayer_GetOwnedGames_Request gamesOwnedRequest = new CPlayer_GetOwnedGames_Request { steamid = bot.SteamID, include_appinfo=true, include_free_sub=true, include_played_free_games=true };
+            CPlayer_GetOwnedGames_Request gamesOwnedRequest = new CPlayer_GetOwnedGames_Request { steamid = bot.SteamID, include_appinfo = true, include_free_sub = true, include_played_free_games = true };
             _PlayerService = steamUnifiedMessages.CreateService<IPlayer>();
             var ownedReponse = await _PlayerService.SendMessage(x => x.GetOwnedGames(gamesOwnedRequest));
             var consumePlaytime = ownedReponse.GetDeserializedResponse<CPlayer_GetOwnedGames_Response>();
@@ -216,7 +216,7 @@ namespace ASFItemDropManager
                 return "SteamUnifiedMessages Error";
             }
 
-            CPlayer_GetOwnedGames_Request gamesOwnedRequest = new CPlayer_GetOwnedGames_Request { steamid = bot.SteamID, include_appinfo = true, include_free_sub= true, include_played_free_games=true };
+            CPlayer_GetOwnedGames_Request gamesOwnedRequest = new CPlayer_GetOwnedGames_Request { steamid = bot.SteamID, include_appinfo = true, include_free_sub = true, include_played_free_games = true };
             _PlayerService = steamUnifiedMessages.CreateService<IPlayer>();
             var ownedReponse = await _PlayerService.SendMessage(x => x.GetOwnedGames(gamesOwnedRequest));
             var consumePlaytime = ownedReponse.GetDeserializedResponse<CPlayer_GetOwnedGames_Response>();
